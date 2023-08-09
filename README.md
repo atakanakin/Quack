@@ -21,7 +21,7 @@ To use the Quack App, follow these steps:
 1. Clone the repository to your local machine:
 
 ```
-git clone [https://github.com/atakanakin/Quack.git](https://github.com/atakanakin/Quack.git)
+git clone https://github.com/atakanakin/Quack.git
 ```
 
 2. Open the project in Android Studio.
