@@ -12,7 +12,7 @@ The Quack App is a simple Android application that displays random duck photos a
 
 ## Screenshots
 
-<img src="duck/1.png" alt="Duck 1" width="300">    <img src="duck/2.png" alt="Duck 2" width="300">    <img src="duck/3.png" alt="Duck 3" width="300">
+<img src="duck/1.jpg" alt="Duck 1" width="300">     <img src="duck/2.jpg" alt="Duck 2" width="300">      <img src="duck/3.jpg" alt="Duck 3" width="300">       <img src="duck/4.jpg" alt="Duck 4" width="300">
 
 ## Getting Started
 
