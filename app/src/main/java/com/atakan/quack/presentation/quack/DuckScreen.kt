@@ -1,5 +1,7 @@
 package com.atakan.quack.presentation.quack
 
+import android.content.Context
+import android.media.MediaPlayer
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -16,13 +18,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.atakan.quack.R
 import com.atakan.quack.presentation.quack.components.Image
 
 @Composable
 fun DuckScreen(
+    context: Context,
     viewModel: DuckViewModel = hiltViewModel()
 ) {
     val state = viewModel.state.value
+
+    val mediaPlayer = MediaPlayer.create(context, R.raw.quack)
 
     // Remember the viewModel to avoid unnecessary recomposition
     val rememberedViewModel = remember { viewModel }
@@ -53,6 +59,7 @@ fun DuckScreen(
 
         Button(onClick = {
             rememberedViewModel.refreshDuck()
+            mediaPlayer.start()
         }) {
             Text(text = "Quack")
         }
