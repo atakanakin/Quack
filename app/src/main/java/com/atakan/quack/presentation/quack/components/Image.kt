@@ -13,5 +13,5 @@ import com.bumptech.glide.integration.compose.GlideImage
 fun Image(duck: Duck,
           modifier: Modifier
 ) {
-    GlideImage(model = duck.url, contentDescription = "Quack", modifier = modifier.fillMaxSize())
+    GlideImage(model = duck.url, contentDescription = "Quack", modifier = modifier.fillMaxWidth())
 }

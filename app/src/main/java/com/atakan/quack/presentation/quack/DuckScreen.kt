@@ -6,6 +6,8 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
@@ -35,12 +37,13 @@ fun DuckScreen(
 
     Column(verticalArrangement = Arrangement.SpaceEvenly, horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier
         .padding(20.dp)
-        .fillMaxHeight(1f)) {
-        if (!state.error.isNotBlank()){
+        .fillMaxWidth()
+        ) {
+        if (state.error.isBlank()){
             Text(text = "Here is your duck")
         }
         Box(
-            modifier = Modifier.fillMaxHeight(0.5f),
+            modifier = Modifier.fillMaxWidth().fillMaxHeight(0.5f),
             contentAlignment = Alignment.Center // Center the content vertically
         ) {
             if (state.error.isNotBlank()) {
@@ -53,7 +56,7 @@ fun DuckScreen(
             } else if (state.isLoading) {
                 CircularProgressIndicator(modifier = Modifier)
             } else {
-                Image(duck = state.duck, modifier = Modifier)
+                Image(duck = state.duck, modifier = Modifier.fillMaxSize())
             }
         }
 
