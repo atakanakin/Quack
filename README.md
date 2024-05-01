@@ -76,13 +76,11 @@ For network operations, this app uses Retrofit and OkHttp. The following depende
 
 These libraries provide powerful tools for making API calls and handling network requests.
 
-### Glide Compose
+### Coil Compose
 
-To simplify image loading and display, the app uses Glide Compose. The following dependency is included:
+To simplify image loading and display, the app uses Coil Compose. The following dependency is included:
 
-- com.github.bumptech.glide:compose:1.0.0-alpha.1
-
-This library is tailored for integrating Glide with Jetpack Compose.
+- io.coil-kt:coil-compose:2.4.0
 
 Please ensure that you include these dependencies in your app-level `build.gradle` file as appropriate for your project.
 
